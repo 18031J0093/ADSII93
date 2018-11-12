@@ -1,0 +1,74 @@
+Leaning by doing-1
+Two graphs are isomorphic if there is a way to rename the vertices of one to make it identical to the other. Draw all the non isomorphic graphs with two, three, four, and five vertices.
+  for 2 vertices:
+ taken graph     : A__B
+
+ isomorphic graph: B__A
+
+  for 3 vertices:
+  taken graph      : A__B__C
+
+  isomorphic graph : C__B__A
+                   : B__A__C
+                   : A__C__B
+
+  For 4  vertices:
+   taken graph     : 
+                     A__B
+                     |  |
+                     C__D
+isomophic graphs:
+                     B__A
+                     |  |
+                     C__D
+
+                     C__B
+                     |  |
+                     A__D
+
+                     D__B
+                     |  |
+                     C__A
+ For 5 vertices:
+
+taken graph: A__B__E
+	     |  |
+	     C__D
+
+isomophic graphs:
+             B__A__E
+	     |  |
+	     C__D
+ 
+	     E__B__A
+	     |  |
+	     C__D
+	  
+	     C__B__E
+	     |  |
+	     A__D
+   
+             D__B__E
+	     |  |
+	     C__A
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
