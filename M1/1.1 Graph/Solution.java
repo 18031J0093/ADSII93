@@ -18,12 +18,6 @@ class GraphList implements Graph
 	int E;
 	String b[];
      Bag<Integer>[] adj;
-//     GraphList()
-//     {
-//	 adj=(Bag<Integer>[])new Bag[V];
-//	 for(int v=0;v<V;v++)
-//		 adj[v]=new Bag<Integer>();
-//     }
 public int V()
 {
 	return V;
