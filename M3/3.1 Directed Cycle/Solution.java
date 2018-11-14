@@ -70,7 +70,7 @@ public class Solution
 			String s2[] = s1.split(" ");
 			s.addEdge(Integer.parseInt(s2[0]), Integer.parseInt(s2[1]));
 		}
-		if(s.DFS(0))
+		if(!s.DFS(0))
 		{
 		System.out.println("Cycle doesn't exists.");
 		}
