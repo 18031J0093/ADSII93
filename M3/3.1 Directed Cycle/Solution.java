@@ -24,10 +24,11 @@ public class Solution
 	private boolean DFS(int s)
     {
     	boolean visited[] = new boolean[V];
+    	boolean dfsrec[] = new boolean[V];
     	int i=0;
     	while(i<V)
     	{
-    		if(DFSrec(s, visited))
+    		if(DFSrec(s, visited, dfsrec))
     		{
     			return true;
     		}
@@ -35,20 +36,26 @@ public class Solution
     	}
     	return false;
     }
-    private boolean DFSrec(int s, boolean visited[])
+    private boolean DFSrec(int s, boolean visited[], boolean dfsrec[])
     {
+    	if (dfsrec[s]) 
+            return true; 
+  
+        if (visited[s]) 
+            return false;
+        
     	visited[s] = true;
-    	
+    	dfsrec[s] = true;
     		Iterator<Integer>  i = adj[s].iterator();
     		while(i.hasNext())
     		{
     			int n = i.next();
-    			if(!visited[n])
+    			if(DFSrec(n, visited, dfsrec))
     			{
-    				DFSrec(n, visited);
     				return true;
     			}
     		}
+    		dfsrec[s] = false;
     		return false;
     	}
 	public static void main(String[] args)
@@ -63,7 +70,6 @@ public class Solution
 			String s2[] = s1.split(" ");
 			s.addEdge(Integer.parseInt(s2[0]), Integer.parseInt(s2[1]));
 		}
-		
 		if(s.DFS(0))
 		{
 		System.out.println("Cycle doesn't exists.");
